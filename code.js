@@ -13,7 +13,10 @@ async function checkAsync(arr, key){
             return 0;
         }
     }));
-    const total = await results.reduce((tmp, current) => tmp + current, 0);
+    var total = 0;
+    for (var i = 0; i < results.length; i++) {
+        total += await results[i];
+    }
     console.log(total);
     return total;
 }
