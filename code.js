@@ -5,7 +5,7 @@ const numCheck = async (num, key) => {
 }
 
 async function checkAsync(arr, key){
-    const results = await Promise.all(arr.map(async (num) => { // This site https://www.30secondsofcode.org/js/s/async-array-loops/ and 
+    const results = await Promise.all(await arr.map(async (num) => { // This site https://www.30secondsofcode.org/js/s/async-array-loops/ and 
         const match = await numCheck(num, key);                // this site https://medium.com/sliit-foss/js-async-await-in-array-methods-9142a35c6d6f
         if (match == true) {                                   // helped me understand promise functions
             return 1;
