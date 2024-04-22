@@ -21,3 +21,14 @@ this.
 
 What is the time complexity of your implementation (worst-case $\Theta$)? Add
 your answer, including your reasoning, to this markdown file.
+
+The time complexity of my function would be $\Theta(n)$. This implementation is
+made of 3 functions. The function that is called is doThing which calls the 
+checkAsync function, but doesnt have any other relevant processes for asymptotic 
+analysis. The checkAsync function uses the map function to iterate over the 
+entire array which results in a runtime of n. It also calls the numCheck function,
+but this runs in constant time so it doesnt impact the asymptotic complexity either. 
+The final peice is the for loop which condenses the values in the results array into
+one total which runs over the full array once. This works because a one is stored 
+in the promise.all when the key is equal to the number in the original array. So our
+total complexity is n+n or $\Theta (n)$.
