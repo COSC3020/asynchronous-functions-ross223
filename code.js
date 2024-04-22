@@ -24,8 +24,4 @@ async function doThing(arr, key) {
     return results;
 }
 
-var arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var key1 = 1;
-doThing(arr1, key1);
-
 module.exports = {numCheck, checkAsync, doThing};
